@@ -33,41 +33,59 @@
       <path d="M120.5,255.5 C112.216,255.5 105.5,248.784 105.5,240.5 C105.5,232.216 112.216,225.5 120.5,225.5 C128.784,225.5 135.5,232.216 135.5,240.5 C135.5,248.784 128.784,255.5 120.5,255.5 z" fill="#9AD0EC"/>
       <path d="M120.5,255.5 C112.216,255.5 105.5,248.784 105.5,240.5 C105.5,232.216 112.216,225.5 120.5,225.5 C128.784,225.5 135.5,232.216 135.5,240.5 C135.5,248.784 128.784,255.5 120.5,255.5 z" fill-opacity="0" stroke="#000000" stroke-width="1"/>
     </g>
-    <text transform="matrix(1, 0, 0, 1, 180, 60)">
-      <tspan x="-6.024" y="6.5" font-family="Roboto-Bold" font-size="21" fill="#115C81">6</tspan>
+    <text transform="matrix(1, 0, 0, 1, 180.5, 60.5)">
+      <tspan x="-6.524" y="6.5" font-family="Roboto-Bold" font-size="21" fill="#115C81">6</tspan>
     </text>
-    <text transform="matrix(1, 0, 0, 1, 240, 120)">
-      <tspan x="-6.024" y="6.5" font-family="Roboto-Bold" font-size="21" fill="#115C81">3</tspan>
+    <text transform="matrix(1, 0, 0, 1, 240.5, 120.5)">
+      <tspan x="-6.524" y="6.5" font-family="Roboto-Bold" font-size="21" fill="#115C81">3</tspan>
     </text>
-    <text transform="matrix(1, 0, 0, 1, 180, 180)">
-      <tspan x="-6.024" y="6.5" font-family="Roboto-Bold" font-size="21" fill="#115C81">1</tspan>
+    <text transform="matrix(1, 0, 0, 1, 180.5, 180.5)">
+      <tspan x="-6.524" y="6.5" font-family="Roboto-Bold" font-size="21" fill="#115C81">1</tspan>
     </text>
-    <text transform="matrix(1, 0, 0, 1, 60, 180)">
-      <tspan x="-6.024" y="6.5" font-family="Roboto-Bold" font-size="21" fill="#115C81">4</tspan>
+    <text transform="matrix(1, 0, 0, 1, 60.5, 180.5)">
+      <tspan x="-6.524" y="6.5" font-family="Roboto-Bold" font-size="21" fill="#115C81">4</tspan>
     </text>
-    <text transform="matrix(1, 0, 0, 1, 120, 240)">
-      <tspan x="-6.024" y="6.5" font-family="Roboto-Bold" font-size="21" fill="#115C81">2</tspan>
+    <text transform="matrix(1, 0, 0, 1, 120.5, 240.5)">
+      <tspan x="-6.524" y="6.5" font-family="Roboto-Bold" font-size="21" fill="#115C81">2</tspan>
     </text>
-    <text transform="matrix(1, 0, 0, 1, 120, 71)">
-      <tspan x="-10.327" y="6" font-family="Roboto-Bold" font-size="18" fill="#A83A01">40</tspan>
+    <text transform="matrix(1, 0, 0, 1, 120.5, 49.5)">
+      <tspan x="-10.827" y="6" font-family="Roboto-Bold" font-size="18" fill="#A83A01">40</tspan>
     </text>
-    <text transform="matrix(1, 0, 0, 1, 76.351, 120)">
-      <tspan x="-10.327" y="6" font-family="Roboto-Bold" font-size="18" fill="#A83A01">40</tspan>
+    <text transform="matrix(1, 0, 0, 1, 46.851, 120)">
+      <tspan x="-10.827" y="6" font-family="Roboto-Bold" font-size="18" fill="#A83A01">40</tspan>
     </text>
-    <text transform="matrix(1, 0, 0, 1, 120, 164.5)">
-      <tspan x="-10.327" y="6" font-family="Roboto-Bold" font-size="18" fill="#A83A01">40</tspan>
+    <text transform="matrix(1, 0, 0, 1, 120.5, 169.5)">
+      <tspan x="-10.827" y="6" font-family="Roboto-Bold" font-size="18" fill="#A83A01">40</tspan>
     </text>
-    <text transform="matrix(1, 0, 0, 1, 163.649, 120)">
-      <tspan x="-10.327" y="6" font-family="Roboto-Bold" font-size="18" fill="#A83A01">40</tspan>
+    <text transform="matrix(1, 0, 0, 1, 166.649, 120)">
+      <tspan x="-10.827" y="6" font-family="Roboto-Bold" font-size="18" fill="#A83A01">40</tspan>
     </text>
-    <text transform="matrix(1, 0, 0, 1, 76.351, 221)">
-      <tspan x="-10.327" y="6" font-family="Roboto-Bold" font-size="18" fill="#A83A01">15</tspan>
+    <text transform="matrix(1, 0, 0, 1, 76.851, 221)">
+      <tspan x="-10.827" y="6" font-family="Roboto-Bold" font-size="18" fill="#A83A01">15</tspan>
     </text>
-    <text transform="matrix(1, 0, 0, 1, 223.649, 161)">
-      <tspan x="-10.327" y="6" font-family="Roboto-Bold" font-size="18" fill="#A83A01">15</tspan>
+    <text transform="matrix(1, 0, 0, 1, 224.149, 161)">
+      <tspan x="-10.827" y="6" font-family="Roboto-Bold" font-size="18" fill="#A83A01">15</tspan>
     </text>
-    <text transform="matrix(1, 0, 0, 1, 223.649, 242)">
-      <tspan x="-34.248" y="7.5" font-family="Roboto-Bold" font-size="24" fill="#A83A01">ET=80</tspan>
+    <text transform="matrix(1, 0, 0, 1, 224.149, 242)">
+      <tspan x="-34.748" y="7.5" font-family="Roboto-Bold" font-size="24" fill="#A83A01">ET=80</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 76.851, 46)">
+      <tspan x="-3.442" y="3.5" font-family="Roboto-Bold" font-size="12" fill="#000000">0</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 198.942, 46)">
+      <tspan x="-3.442" y="3.5" font-family="Roboto-Bold" font-size="12" fill="#000000">1</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 258.942, 105.5)">
+      <tspan x="-3.442" y="3.5" font-family="Roboto-Bold" font-size="12" fill="#000000">2</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 76.851, 164.5)">
+      <tspan x="-3.442" y="3.5" font-family="Roboto-Bold" font-size="12" fill="#000000">3</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 200.942, 180.5)">
+      <tspan x="-3.442" y="3.5" font-family="Roboto-Bold" font-size="12" fill="#000000">4</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 138.942, 224.5)">
+      <tspan x="-3.442" y="3.5" font-family="Roboto-Bold" font-size="12" fill="#000000">5</tspan>
     </text>
   </g>
 </svg>
