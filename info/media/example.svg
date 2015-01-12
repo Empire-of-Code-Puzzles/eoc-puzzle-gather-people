@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="300" height="300" viewBox="0, 0, 300, 300">
+  <g id="Layer_1">
+    <path d="M30.5,30.5 L270.5,30.5 L270.5,270.5 L30.5,270.5 L30.5,30.5 z" fill-opacity="0" stroke="#115C81" stroke-width="4"/>
+    <path d="M60.5,60.5 L60.5,180.5" fill-opacity="0" stroke="#115C81" stroke-width="6"/>
+    <path d="M60.5,60.5 L180.5,60.5" fill-opacity="0" stroke="#115C81" stroke-width="6"/>
+    <path d="M180.5,60.5 L180.5,180.5" fill-opacity="0" stroke="#115C81" stroke-width="6"/>
+    <path d="M180.5,180.5 L245.5,120.5" fill-opacity="0" stroke="#A83A01" stroke-width="6"/>
+    <path d="M60.5,180.5 L180.5,180.5" fill-opacity="0" stroke="#115C81" stroke-width="6"/>
+    <path d="M60.5,180.5 L120.5,240.5" fill-opacity="0" stroke="#115C81" stroke-width="6"/>
+    <g>
+      <path d="M60.5,75.5 C52.216,75.5 45.5,68.784 45.5,60.5 C45.5,52.216 52.216,45.5 60.5,45.5 C68.784,45.5 75.5,52.216 75.5,60.5 C75.5,68.784 68.784,75.5 60.5,75.5 z" fill="#FA5E09"/>
+      <path d="M60.5,75.5 C52.216,75.5 45.5,68.784 45.5,60.5 C45.5,52.216 52.216,45.5 60.5,45.5 C68.784,45.5 75.5,52.216 75.5,60.5 C75.5,68.784 68.784,75.5 60.5,75.5 z" fill-opacity="0" stroke="#000000" stroke-width="1"/>
+    </g>
+    <g>
+      <path d="M60.5,195.5 C52.216,195.5 45.5,188.784 45.5,180.5 C45.5,172.216 52.216,165.5 60.5,165.5 C68.784,165.5 75.5,172.216 75.5,180.5 C75.5,188.784 68.784,195.5 60.5,195.5 z" fill="#9AD0EC"/>
+      <path d="M60.5,195.5 C52.216,195.5 45.5,188.784 45.5,180.5 C45.5,172.216 52.216,165.5 60.5,165.5 C68.784,165.5 75.5,172.216 75.5,180.5 C75.5,188.784 68.784,195.5 60.5,195.5 z" fill-opacity="0" stroke="#000000" stroke-width="1"/>
+    </g>
+    <g>
+      <path d="M180.5,75.5 C172.216,75.5 165.5,68.784 165.5,60.5 C165.5,52.216 172.216,45.5 180.5,45.5 C188.784,45.5 195.5,52.216 195.5,60.5 C195.5,68.784 188.784,75.5 180.5,75.5 z" fill="#9AD0EC"/>
+      <path d="M180.5,75.5 C172.216,75.5 165.5,68.784 165.5,60.5 C165.5,52.216 172.216,45.5 180.5,45.5 C188.784,45.5 195.5,52.216 195.5,60.5 C195.5,68.784 188.784,75.5 180.5,75.5 z" fill-opacity="0" stroke="#000000" stroke-width="1"/>
+    </g>
+    <g>
+      <path d="M180.5,195.5 C172.216,195.5 165.5,188.784 165.5,180.5 C165.5,172.216 172.216,165.5 180.5,165.5 C188.784,165.5 195.5,172.216 195.5,180.5 C195.5,188.784 188.784,195.5 180.5,195.5 z" fill="#9AD0EC"/>
+      <path d="M180.5,195.5 C172.216,195.5 165.5,188.784 165.5,180.5 C165.5,172.216 172.216,165.5 180.5,165.5 C188.784,165.5 195.5,172.216 195.5,180.5 C195.5,188.784 188.784,195.5 180.5,195.5 z" fill-opacity="0" stroke="#000000" stroke-width="1"/>
+    </g>
+    <g>
+      <path d="M240.5,135.5 C232.216,135.5 225.5,128.784 225.5,120.5 C225.5,112.216 232.216,105.5 240.5,105.5 C248.784,105.5 255.5,112.216 255.5,120.5 C255.5,128.784 248.784,135.5 240.5,135.5 z" fill="#CECECE"/>
+      <path d="M240.5,135.5 C232.216,135.5 225.5,128.784 225.5,120.5 C225.5,112.216 232.216,105.5 240.5,105.5 C248.784,105.5 255.5,112.216 255.5,120.5 C255.5,128.784 248.784,135.5 240.5,135.5 z" fill-opacity="0" stroke="#000000" stroke-width="1"/>
+    </g>
+    <g>
+      <path d="M120.5,255.5 C112.216,255.5 105.5,248.784 105.5,240.5 C105.5,232.216 112.216,225.5 120.5,225.5 C128.784,225.5 135.5,232.216 135.5,240.5 C135.5,248.784 128.784,255.5 120.5,255.5 z" fill="#9AD0EC"/>
+      <path d="M120.5,255.5 C112.216,255.5 105.5,248.784 105.5,240.5 C105.5,232.216 112.216,225.5 120.5,225.5 C128.784,225.5 135.5,232.216 135.5,240.5 C135.5,248.784 128.784,255.5 120.5,255.5 z" fill-opacity="0" stroke="#000000" stroke-width="1"/>
+    </g>
+    <text transform="matrix(1, 0, 0, 1, 180, 60)">
+      <tspan x="-6.024" y="6.5" font-family="Roboto-Bold" font-size="21" fill="#115C81">6</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 240, 120)">
+      <tspan x="-6.024" y="6.5" font-family="Roboto-Bold" font-size="21" fill="#115C81">3</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 180, 180)">
+      <tspan x="-6.024" y="6.5" font-family="Roboto-Bold" font-size="21" fill="#115C81">1</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 60, 180)">
+      <tspan x="-6.024" y="6.5" font-family="Roboto-Bold" font-size="21" fill="#115C81">4</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 120, 240)">
+      <tspan x="-6.024" y="6.5" font-family="Roboto-Bold" font-size="21" fill="#115C81">2</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 120, 71)">
+      <tspan x="-10.327" y="6" font-family="Roboto-Bold" font-size="18" fill="#A83A01">40</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 76.351, 120)">
+      <tspan x="-10.327" y="6" font-family="Roboto-Bold" font-size="18" fill="#A83A01">40</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 120, 164.5)">
+      <tspan x="-10.327" y="6" font-family="Roboto-Bold" font-size="18" fill="#A83A01">40</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 163.649, 120)">
+      <tspan x="-10.327" y="6" font-family="Roboto-Bold" font-size="18" fill="#A83A01">40</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 76.351, 221)">
+      <tspan x="-10.327" y="6" font-family="Roboto-Bold" font-size="18" fill="#A83A01">15</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 223.649, 161)">
+      <tspan x="-10.327" y="6" font-family="Roboto-Bold" font-size="18" fill="#A83A01">15</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 223.649, 242)">
+      <tspan x="-34.248" y="7.5" font-family="Roboto-Bold" font-size="24" fill="#A83A01">ET=80</tspan>
+    </text>
+  </g>
+</svg>
