@@ -1,32 +1,30 @@
 <p>
-    We should be prepared for an emergency situations and model evacuation process.
-    Rooms in the building are connected by corridors various length.
-    And each room has various quantity of staffs in it.
-    We should calculate how many people will be in evacuation room for the given time.
+    We need to be prepared for emergency situations, so it would be good for us to develop a model evacuation process.
+    Each of the rooms in the building are connected by corridors of various lengths. Each room may contain a varying
+    number of occupants at any given time. We should calculate how many people can get to the evacuation zone by a given
+    time.
 </p>
 
 <p>
-    A building room and passage information can be represented as a matrix (M).
-    Each room has a number from 0 to N. The matrix has size NxN.
-    In diagonals we are given information about how many people in the room --
-    M[i][i] is how many people in the i-th room.<br>
-    In other cell of matrix are given an information about passages --
-    how much time (in minutes) are required to pass from room i to room j (M[i][j] == M[j][i]).
-    If time is zero, then passage is not exist between these rooms.
-    The evacuation room is a room with number 0 (zero).
+    Room and hallway information can be represented in a matrix (M). Each room has a number from 0 to N where the matrix
+    has size of NxN. In the diagonals we are given information about how many people occupy the room -- M[i][i] is how
+    many people in the i-th room.<br>
+    In other cells of the matrix, you are given an information about the hallways, specifically how much time (in
+    minutes) is required to move from room i to room j (M[i][j] == M[j][i]). If time the is zero, then a hallway does
+    not exist between these rooms. The evacuation zone is a room marked with the number 0 (zero).
+
 </p>
 
 <p>
-    You are given a building matrix and evacuation time (minutes).
-    People use the shortest path for evacuation. How many people will be escaped?
-    The room pass don't take time, only passages.
-    The room will be escaped if total time to evacuation room is <strong>less or equal</strong>
-    than the given time.
+    You are given a building matrix and evacuation time in minutes. People must always use the shortest path to evacuate
+    the building. By the specified time, how many people will have escaped? For this mission, passing through a room
+    doesn’t take any time, only passing through hallways. A room will be considered evacuated if the total time to
+    evacuate is less than or equal to the given time.
 </p>
 
 
 <p>
-    For example look at the image
+    For an example take a look at this image:
 </p>
 
 <p style="text-align: center;">
@@ -41,8 +39,8 @@
 </pre>
 <br>
 <p>
-    It the maximum time is 80, then rooms 1, 3, 4 and 5 will be escaped and the result is
-    6+4+1+2=13.
+    If the given time is 80, then rooms 1, 3, 4 and 5 will be completely evacuated and the result is 6+4+1+2=13.
+
 </p>
 <p>
     <strong>Input: </strong> Two arguments. Information about a building as a list of lists of integers and
@@ -50,9 +48,8 @@
 </p>
 
 <p>
-    <strong>Output: </strong> How many people will escape as an integer.
+    <strong>Output: </strong> The number of people who escaped in time as an integer.
 </p>
-
 
 
 <div class="for_info_only">
@@ -64,7 +61,7 @@
 
 <p class="for_info_only">
     <strong>How it is used: </strong>
-    This model can be used for various cases. For example for flood or gathering resources and etc.
+    This model can be used model a variety of situations such as flood or resource gathering, etc.
 </p>
 
 <p>
