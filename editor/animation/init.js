@@ -147,8 +147,8 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210', 'snap.svg_030'],
 
             var roomRadius = 20;
 
-            var cellSize = 40;
-            var sizeX = 400 + 2 * pad;
+            var cellSize = 37;
+            var sizeX = 370 + 2 * pad;
             var sizeY;
 
             var paper;
