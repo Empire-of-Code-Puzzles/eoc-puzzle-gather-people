@@ -154,8 +154,8 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210', 'snap.svg_030'],
             var paper;
 
             var aWall = {"stroke": colorBlue4, "stroke-width": 4};
-            var aBadPath = {"stroke": colorBlue4, "stroke-width": 5};
-            var aGoodPath = {"stroke": colorOrange4, "stroke-width": 5};
+            var aGoodPath = {"stroke": colorBlue4, "stroke-width": 5};
+            var aBadPath = {"stroke": colorOrange4, "stroke-width": 5};
             var aText = {
                 "stroke": colorBlue4, "font-family": "Roboto, Arial, open-serif",
                 "font-weight": "bold", "font-size": roomRadius * 1.5
