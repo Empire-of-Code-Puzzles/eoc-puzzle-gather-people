@@ -40,10 +40,10 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210', 'snap.svg_030'],
             }
 
             //YOUR FUNCTION NAME
-            var fname = 'checkio';
+            var fname = 'gather_data';
 
             var checkioInput = data.in;
-            var checkioInputStr = fname + '(' + JSON.stringify(checkioInput) + ')';
+            var checkioInputStr = fname + '(' + JSON.stringify(checkioInput[0]) + ", " + checkioInput[1] + ")";
 
             var failError = function (dError) {
                 $content.find('.call').html(checkioInputStr);
@@ -74,10 +74,14 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210', 'snap.svg_030'],
                 var rightResult = data.ext["answer"];
                 var userResult = data.out;
                 var result = data.ext["result"];
-                var result_addon = data.ext["result_addon"];
+                var rooms = data.ext["rooms"];
+                var paths = data.ext["paths"];
+                var escaped = data.ext["escaped"];
 
-                //if you need additional info from tests (if exists)
-                var explanation = data.ext["explanation"];
+                var svg = new SVG($content.find(".explanation")[0]);
+
+                svg.draw(rooms, paths, escaped);
+
                 $content.find('.output').html('&nbsp;Your result:&nbsp;' + JSON.stringify(userResult));
                 if (!result) {
                     $content.find('.answer').html('Right result:&nbsp;' + JSON.stringify(rightResult));
@@ -121,22 +125,86 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210', 'snap.svg_030'],
 //            });
 //        });
 
-        var colorOrange4 = "#F0801A";
-        var colorOrange3 = "#FA8F00";
-        var colorOrange2 = "#FAA600";
-        var colorOrange1 = "#FABA00";
+        function SVG(dom) {
+            var colorOrange4 = "#F0801A";
+            var colorOrange3 = "#FA8F00";
+            var colorOrange2 = "#FAA600";
+            var colorOrange1 = "#FABA00";
 
-        var colorBlue4 = "#294270";
-        var colorBlue3 = "#006CA9";
-        var colorBlue2 = "#65A1CF";
-        var colorBlue1 = "#8FC7ED";
+            var colorBlue4 = "#294270";
+            var colorBlue3 = "#006CA9";
+            var colorBlue2 = "#65A1CF";
+            var colorBlue1 = "#8FC7ED";
 
-        var colorGrey4 = "#737370";
-        var colorGrey3 = "#9D9E9E";
-        var colorGrey2 = "#C5C6C6";
-        var colorGrey1 = "#EBEDED";
+            var colorGrey4 = "#737370";
+            var colorGrey3 = "#9D9E9E";
+            var colorGrey2 = "#C5C6C6";
+            var colorGrey1 = "#EBEDED";
 
-        var colorWhite = "#FFFFFF";
+            var colorWhite = "#FFFFFF";
+
+            var pad = 5;
+
+            var roomRadius = 20;
+
+            var cellSize = 40;
+            var sizeX = 400 + 2 * pad;
+            var sizeY;
+
+            var paper;
+
+            var aWall = {"stroke": colorBlue4, "stroke-width": 4};
+            var aBadPath = {"stroke": colorBlue4, "stroke-width": 5};
+            var aGoodPath = {"stroke": colorOrange4, "stroke-width": 5};
+            var aText = {
+                "stroke": colorBlue4, "font-family": "Roboto, Arial, open-serif",
+                "font-weight": "bold", "font-size": roomRadius * 1.5
+            };
+            var aBadRoom = {"stroke": colorGrey4, "fill": colorGrey2, "stroke-width": 2};
+            var aGoodRoom = {"stroke": colorGrey4, "fill": colorBlue2, "stroke-width": 2};
+
+            this.draw = function (rooms, paths, escaped) {
+                var minX = Infinity;
+                var minY = Infinity;
+                var maxX = -Infinity;
+                var maxY = -Infinity;
+                for (var i = 0; i < rooms.length(); i++) {
+                    var r = rooms[i];
+                    minX = r[0] < minX ? r[0] : minX;
+                    maxX = r[0] > maxX ? r[0] : maxX;
+                    minY = r[1] < minY ? r[1] : minY;
+                    maxY = r[1] > maxY ? r[1] : maxY;
+                }
+                cellSize = Math.max(400 / (maxX - minX + 2), cellSize);
+                sizeY = (maxY - minY + 2) * cellSize + 2 * pad;
+
+                paper = Raphael(dom, sizeX, sizeY);
+
+                paper.rect(pad, pad, sizeX - 2 * pad, sizeY - 2 * pad).attr(aWall);
+
+                for (i = 0; i < paths.length; i++) {
+                    var f = paths[i][0];
+                    var s = paths[i][1];
+                    var p = paper.path([["M", pad + rooms[f][0] * cellSize, pad + rooms[f][1] * cellSize],
+                        ["L", pad + rooms[s][0] * cellSize, pad + rooms[s][1] * cellSize]]);
+                    if (escaped.indexOf(f) === -1 || escaped.indexOf(s) === -1) {
+                        p.attr(aBadPath);
+                    }
+                    else {
+                        p.attr(aGoodPath);
+                    }
+                }
+                for (i = 0; i < rooms.length; i++) {
+                    paper.circle(pad + cellSize * rooms[i][0], pad + cellSize * rooms[i][1], roomRadius).attr(
+                        escaped.indexOf(i) === -1 ? aBadRoom : aGoodRoom);
+                    paper.text(pad + cellSize * rooms[i][0], pad + cellSize * rooms[i][1], rooms[i][2]).attr(aText);
+
+                }
+            }
+
+        }
+
+
         //Your Additional functions or objects inside scope
         //
         //
