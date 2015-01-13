@@ -78,6 +78,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210', 'snap.svg_030'],
                 var paths = data.ext["paths"];
                 var escaped = data.ext["escaped"];
 
+
                 var svg = new SVG($content.find(".explanation")[0]);
 
                 svg.draw(rooms, paths, escaped);
@@ -175,18 +176,25 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210', 'snap.svg_030'],
                     minY = r[1] < minY ? r[1] : minY;
                     maxY = r[1] > maxY ? r[1] : maxY;
                 }
+
+
                 cellSize = Math.max(370 / (maxX - minX + 2), cellSize);
                 sizeY = (maxY - minY + 2) * cellSize + 2 * pad;
 
                 paper = Raphael(dom, sizeX, sizeY);
+
+
+                //console.log(minX, maxX, minY, maxY);
+                //console.log(cellSize);
 
                 paper.rect(pad, pad, sizeX - 2 * pad, sizeY - 2 * pad).attr(aWall);
 
                 for (i = 0; i < paths.length; i++) {
                     var f = paths[i][0];
                     var s = paths[i][1];
-                    var p = paper.path([["M", pad + rooms[f][0] * cellSize, pad + rooms[f][1] * cellSize],
-                        ["L", pad + rooms[s][0] * cellSize, pad + rooms[s][1] * cellSize]]);
+                    var p = paper.path([["M", pad + (rooms[f][0] - minX + 1) * cellSize,
+                        pad + (rooms[f][1] - minY + 1) * cellSize],
+                        ["L", pad + (rooms[s][0] - minX + 1) * cellSize, pad + (rooms[s][1] - minY + 1) * cellSize]]);
                     if (escaped.indexOf(f) === -1 || escaped.indexOf(s) === -1) {
                         p.attr(aBadPath);
                     }
@@ -195,9 +203,9 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210', 'snap.svg_030'],
                     }
                 }
                 for (i = 0; i < rooms.length; i++) {
-                    paper.circle(pad + cellSize * rooms[i][0], pad + cellSize * rooms[i][1], roomRadius).attr(
+                    paper.circle(pad + cellSize * (rooms[i][0] - minX + 1), pad + cellSize * (rooms[i][1] - minY + 1), roomRadius).attr(
                         escaped.indexOf(i) === -1 ? aBadRoom : aGoodRoom);
-                    paper.text(pad + cellSize * rooms[i][0], pad + cellSize * rooms[i][1], rooms[i][2]).attr(aText);
+                    paper.text(pad + cellSize * (rooms[i][0] - minX + 1), pad + cellSize * (rooms[i][1] - minY + 1), rooms[i][2]).attr(aText);
 
                 }
             }
