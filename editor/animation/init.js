@@ -168,7 +168,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210', 'snap.svg_030'],
                 var minY = Infinity;
                 var maxX = -Infinity;
                 var maxY = -Infinity;
-                for (var i = 0; i < rooms.length(); i++) {
+                for (var i = 0; i < rooms.length; i++) {
                     var r = rooms[i];
                     minX = r[0] < minX ? r[0] : minX;
                     maxX = r[0] > maxX ? r[0] : maxX;
