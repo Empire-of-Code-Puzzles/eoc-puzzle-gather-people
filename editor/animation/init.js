@@ -175,7 +175,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210', 'snap.svg_030'],
                     minY = r[1] < minY ? r[1] : minY;
                     maxY = r[1] > maxY ? r[1] : maxY;
                 }
-                cellSize = Math.max(400 / (maxX - minX + 2), cellSize);
+                cellSize = Math.max(370 / (maxX - minX + 2), cellSize);
                 sizeY = (maxY - minY + 2) * cellSize + 2 * pad;
 
                 paper = Raphael(dom, sizeX, sizeY);
