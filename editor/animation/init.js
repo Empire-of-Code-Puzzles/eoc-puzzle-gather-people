@@ -40,7 +40,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210', 'snap.svg_030'],
             }
 
             //YOUR FUNCTION NAME
-            var fname = 'gather_data';
+            var fname = 'gather_people';
 
             var checkioInput = data.in;
             var checkioInputStr = fname + '(' + JSON.stringify(checkioInput[0]) + ", " + checkioInput[1] + ")";
