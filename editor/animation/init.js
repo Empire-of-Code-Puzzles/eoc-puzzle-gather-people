@@ -187,8 +187,10 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210', 'snap.svg_030'],
 
             var roomRadius = 15;
 
-            var cellSize = 37;
-            var sizeX = 370 + 2 * pad;
+            var W = 350;
+
+            var cellSize = 35;
+            var sizeX = W + 2 * pad;
             var sizeY;
 
             var paper;
@@ -217,7 +219,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210', 'snap.svg_030'],
                 }
 
 
-                cellSize = Math.max(370 / (maxX - minX + 2), cellSize);
+                cellSize = Math.max(W / (maxX - minX + 2), cellSize);
                 sizeY = (maxY - minY + 2) * cellSize + 2 * pad;
 
                 paper = Raphael(dom, sizeX, sizeY);
