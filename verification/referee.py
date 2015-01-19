@@ -43,7 +43,7 @@ api.add_listener(
             'python-3': cover_codes.unwrap_args
         },
         function_name="golf",
-        max_length="250"
+        max_length=250
         # checker=None,  # checkers.float.comparison(2)
         # add_allowed_modules=[],
         # add_close_builtins=[],
