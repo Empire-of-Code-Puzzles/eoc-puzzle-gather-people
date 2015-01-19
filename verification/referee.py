@@ -28,7 +28,7 @@ checkio.referee.cover_codes
 
 from checkio.signals import ON_CONNECT
 from checkio import api
-from checkio.referees.io import CheckiOReferee
+from golf import CheckioRefereeGolf
 from checkio.referees import cover_codes
 from checkio.referees import checkers
 
@@ -36,7 +36,7 @@ from tests import TESTS
 
 api.add_listener(
     ON_CONNECT,
-    CheckiOReferee(
+    CheckioRefereeGolf(
         tests=TESTS,
         cover_code={
             'python-27': cover_codes.unwrap_args,  # or None
