@@ -1,0 +1,142 @@
+<p>
+  私たちは緊急事態に備える必要があります、そこで避難過程のモデルを開発することにしました。
+  建物の部屋は様々な長さの廊下で繋がれています(しかしそれらは孤立しているかもしれません)。
+  それぞれの部屋はいつでも様々な数の居住者を含む可能性があります。
+  私たちは与えられた時間でどれだけの人々が避難場所にたどり着けるか計算しなくてはいけません。
+</p>
+<!-- <p>
+    We need to be prepared for emergency situations, so it would be good for us to develop a model evacuation process.
+    The rooms in the building are connected by corridors of various lengths (but they can be isolated).
+    Each room may contain a varying number of occupants at any given time.
+    We should calculate how many people can get to the evacuation zone by a given time.
+</p> -->
+
+<p>
+  部屋と廊下の情報は行列 (M) で表現されます。
+  それぞれの部屋は0からNの番号を持っていて、行列の大きさはNxN です。
+  与えられた情報の対角成分はどれだけの人々が部屋にいるかを表しています --
+  M[i][i]は i番目の部屋に居る人々の数です。<br>
+  行列の他のマスは廊下についての情報が与えられ、具体的には部屋i から部屋j へ移動するには
+  どれだけの時間(分)が必要か(M[i][j] == M[j][i]) を表しています。
+  もし時間が0ならそれらの部屋をつなぐ廊下は存在していないということです。
+  避難場所は番号0 の部屋です。
+
+</p>
+<!-- <p>
+    Room and hallway information can be represented in a matrix (M). Each room has a number from 0 to N where the matrix
+    has size of NxN. In the diagonals we are given information about how many people occupy the room -- M[i][i] is how
+    many people in the i-th room.<br>
+    In other cells of the matrix, you are given an information about the hallways, specifically how much time (in
+    minutes) is required to move from room i to room j (M[i][j] == M[j][i]). If time the is zero, then a hallway does
+    not exist between these rooms. The evacuation zone is a room marked with the number 0 (zero).
+
+</p> -->
+
+<p>
+  あなたは建物の行列と避難時間を分で与えられます。
+  人々は建物を避難するのにいつも最短経路を使います。
+  指定された時間で、どれだけの人々が逃れられますか？
+  このミッションでは部屋を通り抜けるのに時間はかからず、廊下を移動する時のみ時間がかかります。
+  避難にかかる合計時間が与えられた時間以下の部屋は避難すると考えます。
+</p>
+<!-- <p>
+    You are given a building matrix and evacuation time in minutes. People must always use the shortest path to evacuate
+    the building. By the specified time, how many people will have escaped? For this mission, passing through a room
+    doesn’t take any time, only passing through hallways. A room will be considered evacuated if the total time to
+    evacuate is less than or equal to the given time.
+</p> -->
+
+
+<p>
+    例えばこの画像を見てください
+</p>
+<!-- <p>
+    For an example take a look at this image:
+</p> -->
+
+<p style="text-align: center;">
+    <img title="example" src="{{MEDIA}}example.svg" alt="example"/>
+</p>
+<pre>[[ 0, 40,  0, 40,  0,   0],
+ [40,  6,  0,  0, 40,   0],
+ [ 0,  0,  3,  0, 15,   0]
+ [40,  0,  0,  4, 40,  15]
+ [ 0, 40, 15, 40,  1,   0]
+ [ 0,  0,  0, 15,  0,   2]]
+</pre>
+<br>
+<p>
+  もし与えられた時間が80ならば1, 3, 4, 5の部屋の人々は完全に避難可能で結果は6+4+1+2=13 となります。
+</p>
+<!-- <p>
+    If the given time is 80, then rooms 1, 3, 4 and 5 will be completely evacuated and the result is 6+4+1+2=13.
+
+</p> -->
+
+<p>
+  私たちはこのチャレンジにもう一つのルールを課します。
+  これはコードゴルフミッションであなたの主なゴールはあなたのコードを出来る限り短くすることです。
+  コードを短くすればより多くのポイントを獲得することができます。
+  あなたのスコアは動的でコードの長さに直接関連しています。
+  参考までにスコアは使われた文字の数に基づいています。
+  250 文字が許容される最大文字数でこの時は0点です。
+  250文字から1文字減るごとに1ポイント獲得することができます。
+  例えば150文字の長さのコードでは100ポイント獲得することになります。
+  このミッションでは空白はカウントしますがインデントはカウントしません。
+</p>
+<!-- <p>
+    We have one more rule for this challenge. This is a code golf mission and your main goal is to make your code as
+    short as possible. The shorter your code, the more points you earn. Your score for this mission is dynamic and
+    directly related to the length of your code. For reference, scoring is based on the number of characters used. 250
+    characters is the maximum allowable and it will earn you zero points. For each character less than 250, you earn 1
+    point. For example for 150 character long code earns you 100 points. In this mission we count whitespaces, but don't
+    count indents.
+</p> -->
+
+<p>
+    <strong>入力 </strong> 2つの引数。建物に関する情報が整数のリストのリストとして与えられ、避難時間が整数として与えられます。
+</p>
+
+<p>
+    <strong>出力 </strong> 時間内に避難した人々の数を整数として出力します。
+</p>
+
+<!-- <p>
+    <strong>Input: </strong> Two arguments. Information about a building as a list of lists of integers and
+    evacuation time as an integer.
+</p>
+
+<p>
+    <strong>Output: </strong> The number of people who escaped in time as an integer.
+</p> -->
+
+
+<div class="for_info_only">
+    <p>
+        <strong>例</strong>
+    </p>
+    <textarea data-code="python">
+golf([[0, 40, 0, 40, 0, 0],
+      [40, 6, 0, 0, 40, 0],
+      [0, 0, 3, 0, 15, 0],
+      [40, 0, 0, 4, 40, 15],
+      [0, 40, 15, 40, 1, 0],
+      [0, 0, 0, 15, 0, 2]], 80) == 13</textarea>
+</div>
+<br>
+<p class="for_info_only">
+    <strong>どうやって使われるか</strong>
+    このモデルは洪水や資源を集めるといった様々な状況に使うことができます。
+</p>
+<!-- <p class="for_info_only">
+    <strong>How it is used: </strong>
+    This model can be used model a variety of situations such as flood or resource gathering, etc.
+</p> -->
+
+<p>
+    <strong>事前条件</strong>
+</p>
+    <pre class="brush: python">
+1 < len(building) <= 10
+all(building[i][j] == building[j][i] for i in range(len(building)) for j in range(len(building))))
+building[0][0] == 0</pre>
