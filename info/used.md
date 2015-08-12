@@ -1,3 +1,3 @@
 **How it is used:**
 
-This model can be used model a variety of situations such as flood or resource gathering, etc.
+This example can be used to model a variety of scenarios such as flood patterns, resource gathering, etc.
